@@ -1,28 +1,30 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@angular-devkit/build-angular': ^14.1.0
-  '@angular/animations': ^14.1.0
-  '@angular/cli': ~14.1.0
-  '@angular/common': ^14.1.0
-  '@angular/compiler': ^14.1.0
-  '@angular/compiler-cli': ^14.1.0
-  '@angular/core': ^14.1.0
-  '@angular/forms': ^14.1.0
-  '@angular/platform-browser': ^14.1.0
-  '@angular/platform-browser-dynamic': ^14.1.0
-  '@angular/router': ^14.1.0
-  '@types/jasmine': ~4.0.0
+  '@angular-devkit/build-angular': ^14.1.3
+  '@angular/animations': ^14.1.2
+  '@angular/cli': ~14.1.3
+  '@angular/common': ^14.1.2
+  '@angular/compiler': ^14.1.2
+  '@angular/compiler-cli': ^14.1.2
+  '@angular/core': ^14.1.2
+  '@angular/forms': ^14.1.2
+  '@angular/http': ^7.2.16
+  '@angular/platform-browser': ^14.1.2
+  '@angular/platform-browser-dynamic': ^14.1.2
+  '@angular/router': ^14.1.2
+  '@types/jasmine': ~4.0.3
+  bootstrap: ^3.4.1
   jasmine-core: ~4.2.0
   karma: ~6.4.0
-  karma-chrome-launcher: ~3.1.0
+  karma-chrome-launcher: ~3.1.1
   karma-coverage: ~2.2.0
   karma-jasmine: ~5.1.0
   karma-jasmine-html-reporter: ~2.0.0
-  rxjs: ~7.5.0
-  tslib: ^2.3.0
-  typescript: ~4.7.2
-  zone.js: ~0.11.4
+  rxjs: ~7.5.6
+  tslib: ^2.4.0
+  typescript: ~4.7.4
+  zone.js: ~0.11.8
 
 dependencies:
   '@angular/animations': 14.1.2_@angular+core@14.1.2
@@ -30,9 +32,11 @@ dependencies:
   '@angular/compiler': 14.1.2_@angular+core@14.1.2
   '@angular/core': 14.1.2_rxjs@7.5.6+zone.js@0.11.8
   '@angular/forms': 14.1.2_e5851591d0c4ccfee535c3419efb1649
+  '@angular/http': 7.2.16_3b8f1195a5dc7020b55b01ba05114a4d
   '@angular/platform-browser': 14.1.2_dba65d712ed97881812f358e782e7ed7
   '@angular/platform-browser-dynamic': 14.1.2_ea3c3e6f5f886cfe0aaa162c963a1cfc
   '@angular/router': 14.1.2_e5851591d0c4ccfee535c3419efb1649
+  bootstrap: 3.4.1
   rxjs: 7.5.6
   tslib: 2.4.0
   zone.js: 0.11.8
@@ -337,6 +341,20 @@ packages:
       '@angular/platform-browser': 14.1.2_dba65d712ed97881812f358e782e7ed7
       rxjs: 7.5.6
       tslib: 2.4.0
+    dev: false
+
+  /@angular/http/7.2.16_3b8f1195a5dc7020b55b01ba05114a4d:
+    resolution: {integrity: sha512-yvjbNyzFSmmz4UTjCdy5M8mk0cZqf9TvSf8yN5UVIwtw4joyuUdlgJCuin0qSbQOKIf/JjHoofpO2JkPCGSNww==}
+    deprecated: Package no longer supported. Use @angular/common instead, see https://angular.io/guide/deprecations#angularhttp
+    peerDependencies:
+      '@angular/core': 7.2.16
+      '@angular/platform-browser': 7.2.16
+      rxjs: ^6.0.0
+    dependencies:
+      '@angular/core': 14.1.2_rxjs@7.5.6+zone.js@0.11.8
+      '@angular/platform-browser': 14.1.2_dba65d712ed97881812f358e782e7ed7
+      rxjs: 7.5.6
+      tslib: 1.14.1
     dev: false
 
   /@angular/platform-browser-dynamic/14.1.2_ea3c3e6f5f886cfe0aaa162c963a1cfc:
@@ -2527,6 +2545,11 @@ packages:
   /boolbase/1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
     dev: true
+
+  /bootstrap/3.4.1:
+    resolution: {integrity: sha512-yN5oZVmRCwe5aKwzRj6736nSmKDX7pLYwsXiCj/EYmo16hODaBiT4En5btW/jhBF/seV+XMx3aYwukYC3A49DA==}
+    engines: {node: '>=6'}
+    dev: false
 
   /brace-expansion/1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
@@ -6639,7 +6662,6 @@ packages:
 
   /tslib/1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
-    dev: true
 
   /tslib/2.4.0:
     resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
