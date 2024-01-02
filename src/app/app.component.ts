@@ -7,8 +7,8 @@ import { Selection } from './models/selection';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  toggleRecipes: boolean = false;
-  toggleShoppingList: boolean = false;
+  toggleRecipes: boolean = true;
+  toggleShoppingList: boolean = true;
   ngOnInit(): void {}
 
   onToggle(selection: Selection) {

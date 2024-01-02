@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSelection(selection: string) {
+  onSelect(selection: string) {
     if (selection == Selection.recipes) {
       this.toggle.emit(Selection.recipes);
     } else {
