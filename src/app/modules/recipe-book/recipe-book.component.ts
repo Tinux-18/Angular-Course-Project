@@ -13,7 +13,9 @@ export class RecipeBookComponent implements OnInit {
   ngOnInit(): void {}
 
   onSelect(recipe: Recipe) {
-    if (this.selectedRecipe & (this.selectedRecipe.id === recipe.id)) {
+    if (this.selectedRecipe && this.selectedRecipe.id === recipe.id) {
+      // If the same recipe is clicked twice
+      // close the details
       this.selectedRecipe = undefined;
     } else {
       this.selectedRecipe = recipe;
