@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Ingredient } from './ingredient.model';
+import { Ingredient } from '../../models/ingredient';
 
 @Component({
   selector: 'app-shopping',
@@ -14,4 +14,18 @@ export class ShoppingComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  addIngredient(ingredient: Ingredient) {
+    this.ingredients.push(ingredient);
+  }
+
+  removeIngredient(name: string | undefined) {
+    if (name) {
+      this.ingredients = this.ingredients.filter(
+        (ingredient) => ingredient.name !== name
+      );
+    } else {
+      this.ingredients = [];
+    }
+  }
 }
