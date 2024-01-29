@@ -2,8 +2,12 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipe-book *ngIf="toggleRecipes"></app-recipe-book>
-      <app-shopping *ngIf="toggleShoppingList"></app-shopping>
+      <app-recipe-book-container
+        *ngIf="toggleRecipes"
+      ></app-recipe-book-container>
+      <app-shopping-container
+        *ngIf="toggleShoppingList"
+      ></app-shopping-container>
     </div>
   </div>
 </div>

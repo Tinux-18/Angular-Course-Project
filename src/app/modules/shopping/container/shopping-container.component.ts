@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Ingredient } from '../../models/ingredient';
+import { Ingredient } from '../../../models/ingredient';
 
 @Component({
-  selector: 'app-shopping',
-  templateUrl: './shopping.component.html',
-  styleUrls: ['./shopping.component.css'],
+  selector: 'app-shopping-container',
+  templateUrl: './shopping-container.component.html',
+  styleUrls: ['./shopping-container.component.css'],
 })
-export class ShoppingComponent implements OnInit {
+export class ShoppingContainerComponent implements OnInit {
   ingredients: Ingredient[] = [
     new Ingredient('milk', 1, 'l'),
     new Ingredient('flour', 1, 'kg'),
