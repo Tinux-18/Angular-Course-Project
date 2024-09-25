@@ -1,31 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit, SimpleChanges } from '@angular/core';
 import { Ingredient } from '../../../models/ingredient';
+import { ShoppingService } from '../shopping.service';
 
 @Component({
   selector: 'app-shopping-container',
   templateUrl: './shopping-container.component.html',
   styleUrls: ['./shopping-container.component.css'],
+  providers: [ShoppingService],
 })
 export class ShoppingContainerComponent implements OnInit {
-  ingredients: Ingredient[] = [
-    new Ingredient('milk', 1, 'l'),
-    new Ingredient('flour', 1, 'kg'),
-  ];
-  constructor() {}
+  ingredients: Ingredient[] = [];
+  service = inject(ShoppingService);
 
-  ngOnInit(): void {}
-
-  addIngredient(ingredient: Ingredient) {
-    this.ingredients.push(ingredient);
+  ngOnInit(): void {
+    this.ingredients = this.service.getIngredients();
   }
 
-  removeIngredient(name: string | undefined) {
-    if (name) {
-      this.ingredients = this.ingredients.filter(
-        (ingredient) => ingredient.name !== name
-      );
-    } else {
-      this.ingredients = [];
-    }
+  onUpdate() {
+    this.ingredients = this.service.getIngredients();
   }
 }
