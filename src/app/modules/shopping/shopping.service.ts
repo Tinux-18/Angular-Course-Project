@@ -1,17 +1,22 @@
-import { Ingredient } from 'src/app/models/ingredient';
+import { EventEmitter, Injectable } from '@angular/core';
+import { Ingredient, Measurement } from 'src/app/models/ingredient';
 
+@Injectable({ providedIn: 'root' })
 export class ShoppingService {
+  updateIngredients = new EventEmitter<Ingredient[]>();
+
   ingredients: Ingredient[] = [
-    new Ingredient('milk', 1, 'l'),
-    new Ingredient('flour', 1, 'kg'),
+    new Ingredient('milk', 1, Measurement.litre),
+    new Ingredient('flour', 1, Measurement.kilogram),
   ];
 
   getIngredients(): Ingredient[] {
     return this.ingredients;
   }
 
-  addIngredient(ingredient: Ingredient) {
-    this.ingredients.push(ingredient);
+  addIngredients(ingredients: Ingredient[]) {
+    this.ingredients.push(...ingredients);
+    this.updateIngredients.emit();
   }
 
   removeIngredient(name: string | undefined) {
@@ -22,5 +27,6 @@ export class ShoppingService {
     } else {
       this.ingredients = [];
     }
+    this.updateIngredients.emit();
   }
 }

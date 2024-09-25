@@ -24,14 +24,18 @@
           />
         </div>
         <div class="col-sm-2 form-group">
-          <label for="measurement">Measurement</label
-          ><input
-            type="text"
-            name="name"
-            id="name"
+          <label for="measurement">Measurement</label>
+          <select
+            name="measurement"
+            id="measurement"
             class="form-control"
             #measurementInput
-          />
+          >
+            <option value="">Select measurement</option>
+            <option *ngFor="let measure of measurements" [value]="measure">
+              {{ measure }}
+            </option>
+          </select>
         </div>
       </div>
       <div class="row">
