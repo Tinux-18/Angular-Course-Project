@@ -1,0 +1,27 @@
+<div class="body">
+  <!-- Only show content when data is received -->
+  @if (dataService.investmentResults().length > 0) {
+  <table>
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Investment Value</th>
+        <th>Interest (year)</th>
+        <th>Total Interest</th>
+        <th>Invested Capital</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (row of dataService.investmentResults(); track row.year) {
+      <tr>
+        <td>{{ row.year }}</td>
+        <td>{{ row.valueEndOfYear | currency }}</td>
+        <td>{{ row.interest | currency }}</td>
+        <td>{{ row.totalInterest | currency }}</td>
+        <td>{{ row.totalAmountInvested | currency }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  }
+</div>

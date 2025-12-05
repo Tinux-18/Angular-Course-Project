@@ -1,0 +1,11 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body img {
+  display: block;
+  max-width: 200px;
+  height: auto; /* Maintains aspect ratio */
+}
