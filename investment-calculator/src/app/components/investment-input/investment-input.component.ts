@@ -6,7 +6,7 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { DataService } from '../../services/data.service';
-import { Investment } from '../../models/investment.model';
+import type { Investment } from '../../models/investment.model';
 
 @Component({
   selector: 'app-investment-input',
